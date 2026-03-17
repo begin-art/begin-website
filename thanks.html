@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提交成功 - Begin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+            box-shadow: inset 0px 0px 0px #10b981;
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+        .checkmark__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: #10b981;
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+        @keyframes stroke {
+            100% { stroke-dashoffset: 0; }
+        }
+        @keyframes scale {
+            0%, 100% { transform: none; }
+            50% { transform: scale3d(1.1, 1.1, 1); }
+        }
+        @keyframes fill {
+            100% { box-shadow: inset 0px 0px 0px 50px #10b981; }
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen flex items-center justify-center">
+    <div class="max-w-md w-full mx-4">
+        <div class="glass rounded-3xl p-8 text-center">
+            <!-- 成功动画图标 -->
+            <div class="flex justify-center mb-6">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            
+            <h1 class="text-3xl font-bold mb-4">
+                <span class="gradient-text">提交成功！</span>
+            </h1>
+            
+            <p class="text-gray-400 mb-6">
+                感谢您的留言，我们已经收到您的信息。<br>
+                我们的团队会尽快通过邮件或电话与您联系。
+            </p>
+            
+            <div class="bg-slate-800/50 rounded-xl p-4 mb-6">
+                <div class="flex items-center justify-center text-sm text-gray-400">
+                    <i class="fas fa-envelope mr-2 text-primary"></i>
+                    <span>消息已发送至：1755934932@qq.com</span>
+                </div>
+            </div>
+            
+            <div class="space-y-3">
+                <a href="index.html" class="block w-full py-4 bg-gradient-to-r from-primary to-secondary rounded-xl font-semibold hover:shadow-lg hover:shadow-primary/50 transition transform hover:scale-[1.02]">
+                    <i class="fas fa-home mr-2"></i> 返回首页
+                </a>
+                
+                <a href="index.html#contact" class="block w-full py-4 glass rounded-xl font-semibold hover:bg-white/20 transition">
+                    <i class="fas fa-arrow-left mr-2"></i> 继续留言
+                </a>
+            </div>
+            
+            <div class="mt-6 pt-6 border-t border-gray-700">
+                <p class="text-sm text-gray-500">
+                    如有紧急需求，请直接拨打：<br>
+                    <a href="tel:+864008889999" class="text-primary hover:text-secondary transition">+86 400-888-9999</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="text-center mt-6">
+            <div class="flex items-center justify-center">
+                <div class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mr-2">
+                    <span class="text-white font-bold text-sm">B</span>
+                </div>
+                <span class="text-lg font-bold">Begin</span>
+            </div>
+            <p class="text-gray-500 text-sm mt-2">开启无限可能</p>
+        </div>
+    </div>
+</body>
+</html>
